@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="studentApp">
+<head>
+<title>AngularJS Student App</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="studentCtrl">
+<h2>Student Details</h2>
+<label for="numberOfStudents">Enter the Number of Students:</label>
+<input type="number" ng-model="numberOfStudents">
+<button ng-click="displayStudentDetails()">Display Student Details</button>
+<br>
+<p ng-show="students.length > 0">Total Students: {{ students.length }}</p>
+<ul>
+<li ng-repeat="student in students">Name: {{ student.name }}, CGPA: {{ student.cgpa
+}}</li>
+</ul>
